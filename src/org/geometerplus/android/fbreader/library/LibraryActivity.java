@@ -41,7 +41,11 @@ import org.geometerplus.android.util.UIUtil;
 import org.geometerplus.android.fbreader.FBReader;
 import org.geometerplus.android.fbreader.FBUtil;
 import org.geometerplus.android.fbreader.tree.TreeActivity;
-
+/**
+ * 本地书库
+ * @author acer
+ *
+ */
 public class LibraryActivity extends TreeActivity implements MenuItem.OnMenuItemClickListener, View.OnCreateContextMenuListener, Library.ChangeListener {
 	static volatile boolean ourToBeKilled = false;
 
@@ -106,9 +110,12 @@ public class LibraryActivity extends TreeActivity implements MenuItem.OnMenuItem
 		final LibraryTree lTree = (LibraryTree)tree;
 		return lTree.isSelectable() && lTree.containsBook(mySelectedBook);
 	}
-
+/**
+ * ListView的点击事件
+ */
 	@Override
 	protected void onListItemClick(ListView listView, View view, int position, long rowId) {
+		System.out.println(rowId+"rowid");
 		final LibraryTree tree = (LibraryTree)getListAdapter().getItem(position);
 		final Book book = tree.getBook();
 		if (book != null) {

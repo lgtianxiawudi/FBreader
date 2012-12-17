@@ -50,7 +50,11 @@ import org.geometerplus.android.fbreader.api.*;
 import org.geometerplus.android.fbreader.tips.TipsActivity;
 
 import org.geometerplus.android.util.UIUtil;
-
+/**
+ * MainActivity
+ * @author acer
+ *
+ */
 public final class FBReader extends ZLAndroidActivity {
 	public static final String BOOK_PATH_KEY = "BookPath";
 

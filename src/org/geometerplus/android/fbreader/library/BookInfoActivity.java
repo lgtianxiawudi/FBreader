@@ -50,7 +50,11 @@ import org.geometerplus.fbreader.network.HtmlUtil;
 
 import org.geometerplus.android.fbreader.FBReader;
 import org.geometerplus.android.fbreader.preferences.EditBookInfoActivity;
-
+/**
+ * 图书信息如数目，语言，文件名。。
+ * @author acer
+ *
+ */
 public class BookInfoActivity extends Activity {
 	private static final boolean ENABLE_EXTENDED_FILE_INFO = false;
 
@@ -100,7 +104,9 @@ public class BookInfoActivity extends Activity {
 			setupAnnotation(book);
 			setupFileInfo(book);
 		}
-
+/**
+ * 开始阅读按钮
+ */
 		setupButton(R.id.book_info_button_open, "openBook", new View.OnClickListener() {
 			public void onClick(View view) {
 				if (myDontReloadBook) {
@@ -115,6 +121,9 @@ public class BookInfoActivity extends Activity {
 				}
 			}
 		});
+		/**
+		 * 编辑图书信息
+		 */
 		setupButton(R.id.book_info_button_edit, "editInfo", new View.OnClickListener() {
 			public void onClick(View view) {
 				startActivityForResult(
@@ -124,6 +133,9 @@ public class BookInfoActivity extends Activity {
 				);
 			}
 		});
+		/**
+		 * 重新加载图书信息
+		 */
 		setupButton(R.id.book_info_button_reload, "reloadInfo", new View.OnClickListener() {
 			public void onClick(View view) {
 				if (book != null) {
